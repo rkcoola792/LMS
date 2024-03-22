@@ -4,13 +4,18 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Homepage from "./components/Homepage/Homepage";
 import TopHeader from "./components/Header/TopHeader";
+import Courses from "./Courses";
+import About from "./About";
+import Members from "./Members";
+import Course from "./Course";
+
 
 function App() {
 
   const Layout = () => {
     return (
       <>
-        <div className="flex gap-8 ">
+        <div className="flex gap-8 h-svh">
           <div className="w-[20%]">
             <Header></Header>
           </div>
@@ -19,8 +24,8 @@ function App() {
             <Outlet></Outlet>
           </div>
         </div>
+            <Footer></Footer>
 
-        <Footer></Footer>
       </>
     );
   };
@@ -30,7 +35,10 @@ function App() {
       element: <Layout></Layout>,
       children: [
         { path: "/", element: <Homepage></Homepage> },
-        // { path: "/marketing", element: <Marketing></Marketing> },
+        { path: "/courses", element: <Courses></Courses> },
+        { path: "/about", element: <About></About> },
+        { path: "/members", element: <Members></Members> },
+        { path: "courses/1", element: <Course></Course> },
       ],
     },
   ]);

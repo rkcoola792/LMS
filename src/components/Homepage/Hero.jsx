@@ -2,8 +2,8 @@ import React from 'react'
 
 const Hero = () => {
   return (
-    <div className="hero h-[100%] relative ">
-      <div className="image h-[70%] overflow-hidden relative">
+    <div className="hero  ">
+      <div className="image h-[300px] overflow-hidden relative">
         <img
           src="https://demos.wplms.io/mooc/wp-content/uploads/2022/09/bg.png"
           alt=""
